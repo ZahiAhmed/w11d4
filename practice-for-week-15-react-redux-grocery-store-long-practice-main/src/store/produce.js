@@ -3,7 +3,7 @@ import produceData from "../mockData/produce.json"
 const POPULATE = "produce/POPULATE"
 
 const produceReducer = (state = {}, action) => {
-        switch (action.type) {
+    switch (action.type) {
             case POPULATE:
                 const newState = {};
                 action.produce.forEach(produce => {
@@ -16,6 +16,7 @@ const produceReducer = (state = {}, action) => {
       }
 
 export const populateProduce = () => {
+    
     return {
         type: POPULATE,
         produce: produceData
